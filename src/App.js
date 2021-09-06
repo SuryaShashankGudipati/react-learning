@@ -4,26 +4,45 @@ import React, { useState, useEffect } from 'react'
 
 import { Card } from './components';
 
+function reactComponent() {
+  return (
+    <span style={{ color: "red" }}>This is a react component</span>
+  )
+}
+
+
+const data = [
+  { id: 1, body: "hey body", title: "title", userId: "userId" }
+]
+
 function App() {
+  const [select, setSeleted] = useState({
 
-  const [data, setData] = useState([])
+  })
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((json) => setData(json));
-  }, [])
+
+  // useEffect(() => {
+  //   fetch('https://jsonplaceholder.typicode.com/posts')
+  //     .then((response) => response.json())
+  //     .then((json) => setData(json));
+  // }, [])
+
+  function handleSelection(item) {
+    setSeleted(item)
+  }
+
+  const textElement = "<div><h1>Inner HTML<h1></div>"
 
   return (
     <div className="App">
-      {
-        data.map(eachItem => <Card key={eachItem.id} title={eachItem.title} body={eachItem.body} userId={eachItem.fetchuserId} />)
-        //data.map(eachItem => <Card key={eachItem.id} data={eachItem}  />)
-      }
+      {textElement}
+      <div style={{ backgroundColor: "green" }}>
+        {select && <div>{select.title}</div>}
+      </div>
+      <div dangerouslySetInnerHTML={{ __html: textElement }} />
     </div>
   );
 }
 
 export default App;
-
 

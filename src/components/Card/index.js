@@ -1,5 +1,5 @@
 
-export default function ({ id, body, userId, title }) {
+export default function ({ id, body, userId, title, textElement, handleClick, someComponent }) {
     // const { id, body, userId, title } = props
     // const { id, body, userId, title } = props.data
     return (
@@ -10,6 +10,7 @@ export default function ({ id, body, userId, title }) {
             <div>{body}</div>
             <div>{userId}</div>
             <div>{title}</div>
+            {someComponent}
         </div>
     )
 }
