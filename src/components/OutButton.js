@@ -1,5 +1,5 @@
 
 
 export default function OutButton() {
-    return <button>In Button</button>
+    return <button>Out Button</button>
 }
