@@ -26,8 +26,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        {dinesh}
-
+        {data.map(item => <Card data={item} handleClick={handleSelection} someComponent={<ReactComponent />} />)}
       </div>
 
     </div>
