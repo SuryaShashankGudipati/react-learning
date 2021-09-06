@@ -1,11 +1,13 @@
 
-export default function ({ id, body, userId, title, textElement, handleClick, someComponent }) {
-    // const { id, body, userId, title } = props
-    // const { id, body, userId, title } = props.data
+export default function ({ data, someComponent, handleClick }) {
+
+    const { id, body, userId, title } = data
     return (
-        <div style={{
-            border: "2px solid red"
-        }}>
+        <div
+            onClick={() => handleClick(data)}
+            style={{
+                border: "2px solid red"
+            }}>
             <div>{id}</div>
             <div>{body}</div>
             <div>{userId}</div>
