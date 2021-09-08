@@ -20,3 +20,14 @@ React
   import / exporting default exportings
 
 
+  iife()
+  currying
+  apply call
+  string
+  number
+  array 
+  object 
+  json
+
+
+
