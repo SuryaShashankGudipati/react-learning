@@ -1,13 +1,20 @@
 import logo from './logo.svg';
-import './App.css';
-import React, { useState, useEffect } from 'react'
-import Parent from './Parent'
+import React from 'react'
+import { Provider } from 'react-redux'
+import store from './store'
+
+
+function Dinesh() {
+  return (<div>Dinehs</div>)
+}
 
 function App() {
   return (
-    <div>
-      <Parent />
-    </div >
+    <Provider store={store}>
+      <div>
+        <Dinesh />
+      </div>
+    </Provider>
 
   );
 }
