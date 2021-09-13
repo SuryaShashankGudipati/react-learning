@@ -3,14 +3,14 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import store from './store'
 
-import Home from './components/Home'
 
+import Layout from './layout'
 
 function App() {
   return (
     <Provider store={store}>
       <div>
-        <Home />
+        <Layout />
       </div>
     </Provider>
 

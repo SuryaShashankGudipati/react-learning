@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import counter from './counter';
+import products from './products/reducer';
+import auth from './auth/reducer'
 
 export default configureStore({
     reducer: {
-        counter,
+        products,
+        auth
     },
 });
 
