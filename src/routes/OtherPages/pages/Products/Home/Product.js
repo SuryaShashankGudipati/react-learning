@@ -6,6 +6,7 @@ const Wrapper = styled.div`
 width: 300px;
 box-shadow: 2px 3px 7px #898bd1;
 margin: 6px;
+cursor: pointer;
 `
 
 const FlexBox = styled.div`

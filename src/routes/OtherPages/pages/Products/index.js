@@ -1,14 +1,13 @@
 import React from "react";
-
-import Home from './Home'
-import ProductPage from './ProductPage'
-
 import {
     Switch,
     Route,
     useRouteMatch,
     useParams
 } from "react-router-dom";
+
+import Home from './Home'
+import ProductPage from './ProductPage'
 
 
 function Stupid() {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
+import TextField from '@material-ui/core/TextField';
 
 
 import Product from './Product'
@@ -35,7 +36,7 @@ export default function () {
     return (
         <div>
             <Wrapper>
-                <input value={filter} placeholder="type something" onChange={e => handleFilter(e)} />
+                <TextField value={filter} placeholder="Search Products....." onChange={e => handleFilter(e)} />
             </Wrapper>
             <Wrapper>
                 {filteredProduct.map(eachProduct => <Product key={eachProduct.productId} product={eachProduct} />)}
