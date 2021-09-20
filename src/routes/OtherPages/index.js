@@ -11,6 +11,7 @@ import Admin from "./pages/Admin";
 import Cart from "./pages/Cart";
 import Orders from "./pages/Orders";
 import Products from "./pages/Products";
+import API from "./pages/API";
 
 const FlexBox = styled.div`
   display: flex;
@@ -25,6 +26,7 @@ const links = [
   { to: "/products", label: "Products" },
   { to: "/orders", label: "Orders" },
   { to: "/admin", label: "Admin" },
+  { to: "/api", label: "Api" },
 ];
 
 export default function OtherPages() {
@@ -68,6 +70,9 @@ export default function OtherPages() {
         </Route>
         <Route path="/products">
           <Products />
+        </Route>
+        <Route path="/api">
+          <API />
         </Route>
         <Redirect to="/admin" />
       </Switch>
